@@ -9,13 +9,17 @@ import {
 } from "react-native";
 
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { LinearGradient } from "expo-linear-gradient";
 
 // import google from "../../assets/icons/google.png";
 const google = require("../../assets/icons/google.png");
 
 export function Home() {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["rgba(61, 0, 0, 0.8)", "#f80000"]}
+      style={styles.container}
+    >
       <StatusBar style="auto" />
 
       <Text style={styles.label}>Login: </Text>
@@ -45,14 +49,13 @@ export function Home() {
           Login com Facebook
         </Text>
       </TouchableOpacity>
-    </View>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 16,
